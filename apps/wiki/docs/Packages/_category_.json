@@ -1,0 +1,10 @@
+{
+  "label": "Packages",
+  "position": 7,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Shared Packages",
+    "description": "Documentation for shared packages and libraries used across the platform"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "@repo/core",
+  "description": "Code to share between backend apps/services",
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "compile": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vitest",
+    "build": "tsup && pnpm tsc --emitDeclarationOnly && tsc-alias --verbose",
+    "clean": "del-cli dist tsconfig.tsbuildinfo",
+    "coverage": "vitest run --coverage "
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "@hono/zod-openapi": "^0.19.8",
+    "@repo/common": "workspace:*",
+    "@sindresorhus/is": "^7.0.1",
+    "@typed-firestore/server": "1.0.0",
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.0.2",
+    "firebase-functions": "^6.3.2",
+    "get-or-throw": "^1.4.0",
+    "hono": "^4.8.2",
+    "roarr": "^7.21.1",
+    "safe-stable-stringify": "^2.5.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@codecompose/typescript-config": "^1.2.0",
+    "@eslint/js": "^9.19.0",
+    "@types/node": "^22.15.34",
+    "del-cli": "^6.0.0",
+    "eslint": "^9.19.0",
+    "npm-run-all": "^4.1.5",
+    "tsc-alias": "^1.8.10",
+    "tsup": "^8.3.6",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.21.0",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "@codecompose/typescript-config/library.json",
+  "compilerOptions": {
+    "target": "es5", // Specify ECMAScript target version
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // List of library files to be included in the compilation
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "skipLibCheck": true, // Skip type checking of all declaration files
+    "esModuleInterop": true, // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
+    "module": "esnext", // Specify module code generation
+    "moduleResolution": "node", // Resolve modules using Node.js style
+    "isolatedModules": true, // Unconditionally emit imports for unresolved files
+    "resolveJsonModule": true, // Include modules imported with .json extension
+    "jsx": "react", // Support JSX in .tsx files
+
+  }
+}

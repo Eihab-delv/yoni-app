@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "//"
+  ],
+  "globalDependencies": [
+    ".env"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "build/**",
+        ".firebase/**",
+        ".docusaurus/**"
+      ]
+    }
+  }
+}

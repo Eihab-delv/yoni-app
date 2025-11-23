@@ -1,0 +1,126 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    ".env",
+    "**/.env.*local"
+  ],
+  "globalEnv": [
+    "PORT",
+    "NODE_ENV",
+    "ROARR_LOG",
+    "API_KEY",
+    "NEXT_PUBLIC_API_BASE_URL",
+    "NEXT_PUBLIC_ENVIRONMENT",
+    "NEXT_PUBLIC_FIREBASE_API_KEY",
+    "NEXT_PUBLIC_FIREBASE_APP_ID",
+    "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+    "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID",
+    "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+    "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET",
+    "NEXT_PUBLIC_USE_EMULATORS"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "outputLogs": "new-only",
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env",
+        ".env.local"
+      ],
+      "env": [
+        "ROARR_LOG",
+        "API_KEY",
+        "NEXT_PUBLIC_API_BASE_URL",
+        "NEXT_PUBLIC_ENVIRONMENT",
+        "NEXT_PUBLIC_FIREBASE_API_KEY",
+        "NEXT_PUBLIC_FIREBASE_APP_ID",
+        "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+        "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID",
+        "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+        "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET",
+        "NEXT_PUBLIC_USE_EMULATORS"
+      ]
+    },
+    "build:ci": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "outputLogs": "new-only",
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env",
+        ".env.local"
+      ],
+      "env": [
+        "ROARR_LOG",
+        "API_KEY",
+        "NEXT_PUBLIC_API_BASE_URL",
+        "NEXT_PUBLIC_ENVIRONMENT",
+        "NEXT_PUBLIC_FIREBASE_API_KEY",
+        "NEXT_PUBLIC_FIREBASE_APP_ID",
+        "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+        "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID",
+        "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+        "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET",
+        "NEXT_PUBLIC_USE_EMULATORS"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "test/**/*.tsx"
+      ]
+    },
+    "coverage": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "test/**/*.tsx"
+      ]
+    },
+    "lint": {
+      "dependsOn": []
+    },
+    "compile": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "clean": {
+      "dependsOn": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "setup-env:dev": {
+      "outputs": []
+    }
+  }
+}

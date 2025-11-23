@@ -1,0 +1,90 @@
+{
+  "cli": {
+    "version": "16.3.1",
+    "appVersionSource": "remote",
+    "requireCommit": false
+  },
+  "build": {
+    "base": {
+      "corepack": true
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": true,
+      "distribution": "internal",
+      "environment": "development",
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "dev",
+        "EXPO_PUBLIC_SERVER_IDENTIFIER": "123456",
+        "EXPO_PUBLIC_API_BASE_URL": "https://dev-api.delv.com.au"
+      },
+      "channel": "development"
+    },
+    "local-simulator": {
+      "extends": "development",
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "local",
+        "EXPO_PUBLIC_SERVER_IDENTIFIER": "123456",
+        "EXPO_PUBLIC_API_BASE_URL": "https://dev-api.delv.com.au"
+      }
+    },
+    "development-simulator": {
+      "extends": "development",
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "dev",
+        "EXPO_PUBLIC_SERVER_IDENTIFIER": "123456",
+        "EXPO_PUBLIC_API_BASE_URL": "https://dev-api.delv.com.au"
+      },
+      "channel": "development-simulator"
+    },
+    "staging": {
+      "extends": "base",
+      "autoIncrement": true,
+      "environment": "preview",
+      "channel": "staging",
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "staging",
+        "EXPO_PUBLIC_SERVER_IDENTIFIER": "123456",
+        "EXPO_PUBLIC_API_BASE_URL": "https://dev-api.delv.com.au"
+      }
+    },
+    "production": {
+      "extends": "base",
+      "autoIncrement": true,
+      "environment": "production",
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "prod",
+        "EXPO_PUBLIC_SERVER_IDENTIFIER": "123456",
+        "EXPO_PUBLIC_API_BASE_URL": "https://dev-api.delv.com.au"
+      }
+    }
+  },
+  "submit": {
+    "staging": {
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
+      },
+      "ios": {
+        "ascAppId": "6747997283",
+        "appleTeamId": "55GUDYNDYG"
+      }
+    },
+    "production": {
+      "android": {
+        "track": "internal"
+      },
+      "ios": {
+        "ascAppId": "6747728887",
+        "appleTeamId": "55GUDYNDYG"
+      }
+    }
+  }
+}

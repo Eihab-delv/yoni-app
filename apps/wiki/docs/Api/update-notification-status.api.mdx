@@ -1,0 +1,71 @@
+---
+id: update-notification-status
+title: "Update notification status"
+description: "Update notification status"
+sidebar_label: "Update notification status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEtr3DAQ/itmTi2o2U2hF9/SEGig0CWP07KUWXs2VipLijTaxBj/9zKWk+yrOdUHWxrP45tvPqkHjwFbYgoRymUPsWqoRSh74M4TlBA5aPsAg4JAT0kHqqHkkEiBxVYcrGO90RWydva3rkGBtlCCR25gWOUwivzd1Z2krZxlsixL9N5MgbPH6KzYjuq79SNVDAp8cJ4Ca4ryd69qZOQUj0ErIJtaKJcQCAVZsuNiNey1szyZbTUM2S16Z2Ou+nU+l09NsQraizeUcDv6F8nXyFQXMVUVxbhJxnSg/le/LcWID3RiMAetvDpO8L+dQnxtmYJFU9xS2FIorkJwYcy073c/tlTsslNM7ChoiRtX50lXjQCWiZcw257PdiPirD+QyDB7SyI03LwL5OoFW2/onwPOcxxEYhsnXlsKMWM9P5ufzUEBa5YE8NN1aLgrFgZ540JbXCyui+05HPaYzcWz5qb45cnKvnZVasnyWFzKeRe5xXFgk+o/pGavwtvAmF545g3qMWUKRv5l0pYwItujDRSUx2frVZwKGhdZIvt+jZHugxkGMT8lCh2Uy5WCLQaNa2Fj2UOto6xrKDdoIh2BfNMpfLqZ5PS5ED5PgZ+MaEXhWzRJdqDgD3UnboRhNShoCGsKI5TsdZkLfrmTXO9Zjg7JoF4jLqqKPH/ou9rR5eLi7vIHKFhPN0/ragkK+AxqfI+Qnc9sl3229WDQPqTxrEFOKs9fh1vMmw==
+sidebar_class_name: "patch api-method"
+info_path: docs/api/api-v-1
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update notification status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/notifications/{notification_id}/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update notification status
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"schema":{"type":"string"},"required":true,"name":"notification_id","in":"path"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"notification_status":{"type":"string","enum":["read","unread"]}},"required":["notification_status"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Status updated successfully","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string"}},"required":["message"]}}}},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "//"
+  ],
+  "globalDependencies": [
+    ".env"
+  ],
+  "tasks": {
+    "gen:schema": {
+      "env": [],
+      "dependsOn": [],
+      "outputs": []
+    }
+  }
+}

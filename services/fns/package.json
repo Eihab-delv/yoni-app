@@ -1,0 +1,46 @@
+{
+  "name": "@repo/fns",
+  "description": "Firebase Cloud Functions that handle background processes, logging, and auxiliary services.",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "files": [
+    "dist",
+    ".env.*",
+    ".env"
+  ],
+  "scripts": {
+    "compile": "tsc --noEmit",
+    "build": "tsup-node",
+    "clean": "del-cli dist isolate tsconfig.tsbuildinfo",
+    "lint": "eslint src",
+    "deploy": "firebase deploy",
+    "setup-env:dev": "infisical export --env dev --path=/fns --format=dotenv > ./.env",
+    "emulate": "firebase emulators:start --project dev"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.5",
+    "@repo/core": "workspace:*",
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.3.0"
+  },
+  "devDependencies": {
+    "@codecompose/typescript-config": "^1.2.0",
+    "@eslint/js": "^9.19.0",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.15.34",
+    "del-cli": "^6.0.0",
+    "eslint": "^9.19.0",
+    "tsup": "^8.3.6",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.21.0",
+    "vitest": "^3.2.4"
+  }
+}

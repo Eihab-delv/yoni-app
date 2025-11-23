@@ -1,0 +1,10 @@
+{
+  "label": "Mobile Development",
+  "position": 5,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Mobile Development",
+    "description": "React Native and Expo development guides for iOS and Android apps"
+  }
+}

@@ -1,0 +1,71 @@
+---
+id: get-notifications-with-pagination-and-filtering
+title: "Get notifications with pagination and filtering"
+description: "Get notifications with pagination and filtering"
+sidebar_label: "Get notifications with pagination and filtering"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEtv2zAM/isGz0aTFNvFt2IoigLDVuxxCoyAtplYrSypFO3NC/zfB9lu6jRekAH1RRb58eNT3INDxoqE2EOy3oPPS6oQkj1I6wgS8MLK7CAGMnUFyRo8GdmgQNrFwPRcK6YCki1qTzEYrHojy5K1EIMykMBzTdxCF8+wm7rKiOEMlcMdvRvRxqs/l7CNSZ9ha8jUtFHFu5DVnviUKw0G3lnjyQe66+UyHAX5nJUTZQP2G0nNxkfGitqqHIPYQwy5NUJGggE6p0fN4tEHq5kgkRn7hglVfiK32SPlAjE4to5Y1BCLKmYTFCWaZjWZLdpZhVbmaVbxMmdzumm2Gy8otT83skwYilub/iftjlqxhr7yQ+hjoK/e532lXfhiuF5+OG3JFxt9GqvfxfBxrmv3RogN6ug7cUMc3TJbhsB4jLsjOe5s9EtJGTncKdMLIjRFtFVaaEy5IiltAQnsqO8aSgkJLJrV4u2EKLO1IbKG2A/eVlfLq+WhFAl8ti1qaaMHjbK1XEU3D/dRs4K3UQ7iIbSvjky4FzavKzLSuwt1cNZLhf3wjVP//8kduT20W+i3LJxG1fupWQfdkPga+nCPU09jKK2XoN3vM/T0k3XXBfHw8MIaLJTHTE9e6hO1073WoK6D7/7F/wM8bq5LoS+76RL8ZPtcAn/dL6/oNFxYBTgk67DMS8KCuE9/MLvJc3IysTrZJIHlMHF3tz+g6/4CdyMnGg==
+sidebar_class_name: "get api-method"
+info_path: docs/api/api-v-1
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get notifications with pagination and filtering"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/notifications"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get notifications with pagination and filtering
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"schema":{"type":"string","enum":["sent_at"]},"required":false,"name":"sortby","in":"query"},{"schema":{"type":"number"},"required":false,"name":"page","in":"query"},{"schema":{"type":"number"},"required":false,"name":"page_size","in":"query"},{"schema":{"type":"string"},"required":false,"name":"venue_id","in":"query"},{"schema":{"type":"string"},"required":false,"name":"user_id","in":"query"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Returns notifications","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string"},"title":{"type":"string"},"body":{"type":"string"},"link":{"type":"string"},"sent_at":{"type":"string"},"notification_status":{"type":"string","enum":["read","unread"]}},"required":["id","title","body","sent_at","notification_status"]}}}}},"204":{"description":"No Content"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: check-api-health-status
+title: "Check API Health Status"
+description: "Verifies the operational status of the API and returns a success message."
+sidebar_label: "Check API Health Status"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFk01v2zAMhv+KxrORjwG7+DZsw1ZgwArs4xLkoMhMrNaWVJLyYhj+7wOVrEubYqcBO9kSxZcvH0oTNMiOfBIfA9TwA8nvPbKRFk1MSFYDtjMsVjKbuC+Rt7c3xobGEEqmwMYazs4hs+mR2R5wARUQcoqBkaGe4PVqpZ+n1VTGs2nRdtKOJ8Ucgg8HzXcxCAbRNJtS513xsrxjzZ2AXYu91T8ZE0INcXeHTqCCROpc/Kny2dHFQRby4QDVczeGfZ86NC6Gvae+lPvdkPGhKQ7C4ZGA50tEahmPVhWuWnsF86xAHrInbKDePLrazrOG3ryIJ5gc8JjQCTaGkQYkg0SRTHQuE2HzPzi9R7G+Y2N3MUuB4YMglVty4fEpj5uXjpgma4UzJeNadPeLv6OaK+hR2thADQcsXVhpoYblsIYKfNhH7WBA4pPb9WK1WEEF4qUY+RxH28lobjsr+0h9mWTJvb6bw9r89NKaLwmDrpvoco9BCmCYK0iRpbcFc7C9yr/THormp1NTX8vDeS4//ZnaP31z58kJHmWZOuuLy0ydVjyB2sCwhm0FbWTR1TTtLON36uZZtx8y0gj1ZlvBYMnbnULbbOcKWrQNEtSbCe5xVELOYdIJDLbLWvXq9s3bi2l9/PAN5vkXs+iJzw==
+sidebar_class_name: "get api-method"
+info_path: docs/api/api-v-1
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check API Health Status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Verifies the operational status of the API and returns a success message.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"API is healthy and running.","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string","description":"A simple confirmation message indicating the API is operational.","example":"API is healthy!"}},"required":["message"]}}}},"500":{"description":"An unexpected server error occurred.","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string","description":"Details about the internal server error.","example":"Internal server error during health check."}},"required":["message"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

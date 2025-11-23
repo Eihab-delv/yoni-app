@@ -1,0 +1,99 @@
+{
+  "name": "ts-monorepo",
+  "description": "Full-stack monorepo template built with TypeScript, Firebase, Next.js, and Expo for web and mobile applications.",
+  "version": "0.0.0",
+  "keywords": [
+    "typescript",
+    "monorepo",
+    "firebase",
+    "firestore",
+    "isolate-package",
+    "typed-firestore",
+    "esm",
+    "turborepo",
+    "nextjs",
+    "expo",
+    "eas",
+    "react-native",
+    "hono",
+    "openapi",
+    "pnpm",
+    "vitest"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "packageManager": "pnpm@10.12.4",
+  "author": "DELV Group Pty Ltd",
+  "contributors": [
+    {
+      "name": "Jack Kitto",
+      "email": "jack.kitto@thenod.app"
+    },
+    {
+      "name": "Daniella Gullotta",
+      "email": "daniella.gullotta@thenod.app"
+    },
+    {
+      "name": "Eihab Obediat",
+      "email": "eihab.obeidat@delv.com"
+    },
+    {
+      "name": "Huthaifa Hamad",
+      "email": "Huthaifa.Banihamad@delv.com"
+    }
+  ],
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delvdotcom/ts-monorepo"
+  },
+  "scripts": {
+    "compile": "turbo run compile",
+    "build": "turbo run build",
+    "build:ci": "turbo run build:ci",
+    "build:packages": "turbo build --filter=@repo/core --filter=@repo/common --filter=@repo/ui --filter=@repo/openapi-schema",
+    "build:fns": "turbo run build --filter=@repo/fns",
+    "build:api": "turbo run build --filter=@repo/api",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "deploy": "firebase deploy",
+    "watch": "turbo watch build --filter=@repo/openapi-schema --filter=@repo/core --filter=@repo/fns --filter=@repo/ui --filter=@repo/api",
+    "lint": "turbo run lint --parallel",
+    "test": "turbo run test -- --watch false",
+    "format": "prettier --write .",
+    "emulate": "firebase emulators:start --project=dev",
+    "db:get-indexes": "firebase firestore:indexes > firestore.indexes.json",
+    "deploy-services:dev": "pnpm run setup-env:dev && firebase deploy --only functions --project=dev",
+    "ci-deploy-services:dev": "firebase deploy --only functions --project=dev",
+    "setup-env:dev": "turbo run setup-env:dev"
+  },
+  "devDependencies": {
+    "@semantic-release/exec": "^7.1.0",
+    "firebase-tools-with-isolate": "13.29.1-2",
+    "prettier": "^3.4.2",
+    "prettier-plugin-jsdoc": "^1.3.2",
+    "semantic-release": "^24.2.7",
+    "semantic-release-conventional-commits": "^3.0.0",
+    "turbo": "^2.3.4",
+    "vercel": "^39.3.0",
+    "vitest": "^3.2.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "unist-util-visit": "^4.1.0",
+      "zod": "3.25.64",
+      "@types/express": "4.17.21",
+      "vite": "^6.0.0",
+      "react": "19.0.0",
+      "react-dom": "19.0.0",
+      "@types/node": "^22.12.0",
+      "vitest": "^3.0.4",
+      "@vitest/browser": "^3.0.4",
+      "storybook": "^9.0.14",
+      "@types/express-serve-static-core": "4.19.6"
+    }
+  }
+}

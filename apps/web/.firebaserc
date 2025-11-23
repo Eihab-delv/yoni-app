@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "example-dev",
+    "dev": "example-dev",
+    "staging": "example-staging",
+    "prod": "example-prod"
+  },
+  "targets": {},
+  "etags": {}
+}

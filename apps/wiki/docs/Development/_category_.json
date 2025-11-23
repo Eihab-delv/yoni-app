@@ -1,0 +1,10 @@
+{
+  "label": "Development Guides",
+  "position": 3,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Development Guidelines",
+    "description": "Essential development practices, conventions, and workflows"
+  }
+}

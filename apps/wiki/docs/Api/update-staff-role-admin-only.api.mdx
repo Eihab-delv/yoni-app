@@ -1,0 +1,71 @@
+---
+id: update-staff-role-admin-only
+title: "Update staff role (Admin only)"
+description: "Update staff role (Admin only)"
+sidebar_label: "Update staff role (Admin only)"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCTy2gNemwXXxLiwIrMGBF1p6CYFAsplZnSypFpzUM//eBUvq1ButlPtgy+UQ+PlIaIRoyHTJSgmo1Qqob7AxUI/AQESpITM7fwqSB8L53hBYqph41eNMJoE9Iv5wFDc5DBdFwA9O6wDHxWbCDhKuDZ/QsSxNj62rDLvjZXQpebO/yhs0d1gwaIoWIxA6TeCm0eIDdG3qrglpPU7GnGHwq2z/P5/KxmGpyURhABUvknnxSO/Q9gv5fVJ09KGOR7aMKsqAZui/jyyHmZ8aqZdFZQn89hLn0jORNq34i7ZDUBVGgnO8t7iZaw6gSm+1WiYDqaGE751Xw7XAMGjrkJtjS4rqRcqXVFcx2pzMZgjQb97MwgQZRa/kyAhePpouldaWFrxRxfhvEsUNKhcvpyfxkDhrYccZ+D4NpeVBXreFtoE4tri7V7hT+rqGY1YPjRv2I6OXfhrrv0HNuoqSLIXFnciv3I/xh6W+yPLeO8ZFnsTUuh+2pFV8RZQWZXZYFNFRPh2StoQmJBTCOG5PwhtppEvN9jzRAtVpr2BlyZiOFr0awLsnaQrU1bcJ3XJ6HFY6W+/k5ViLdIY57o/EDSJq2lz/Q8BuHVyd5Wk8aGjQWKVMo3vOS6NO1xHjZ/e6ETPppx6KuMfI/setXY3W1uD7/Bho2+xujC1Y2kXkAnd+ZasiVl7tAbCO0xt/25lawJag8fwAEJaYQ
+sidebar_class_name: "patch api-method"
+info_path: docs/api/api-v-1
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update staff role (Admin only)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/users/{user_id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update staff role (Admin only)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"schema":{"type":"string"},"required":true,"name":"user_id","in":"path"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"role":{"type":"string"}},"required":["role"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Returns venue","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"type":"string"}},"required":["id","name"]}}}},"400":{"description":"Bad Request"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

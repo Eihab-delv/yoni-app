@@ -1,0 +1,10 @@
+{
+  "label": "API Reference",
+  "position": 4,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "title": "API Documentation",
+    "description": "Complete API reference, endpoints, and backend development guides"
+  }
+}

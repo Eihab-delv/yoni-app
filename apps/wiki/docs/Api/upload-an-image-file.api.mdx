@@ -1,0 +1,71 @@
+---
+id: upload-an-image-file
+title: "Upload an image file"
+description: "Upload an image file"
+sidebar_label: "Upload an image file"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNU01v2zAM/SsCz2qTFNvFt27YoUCxBm1zMoJBsZlanSwpFO3NCPzfB8re5n4MmC+i6afH90j6DISnDhN/CvUAxRmq4Bk9S9h2jm00xKtjoPaiNmwknaoG2xzxEBEKCIdnrBg0RAoRiS0m+Xq0DuX0nXPmIDFTh2N+NBCmGHyaoFfrtRw1popsZBs8FHCP3JFPyrbmCdXu/hb0Up2J0dnKCHj1nOTG/0vLlN86cgtoYrL+CSZtp84S1lCUC+h+En61/vBW69egPs/SRg0f37Nz4xnJG6cekHok9YUoUC73EreLLphaGT8bz23U0CI3oYYCYkjZkOEGClj1m1XGgQbrj0Hq9khp4tpcri/XoIEtS//hNgzG8aC2zrDMVF1vb1S/gdcaprT6YblRdxG9vNeh6lr0nDsuLkVIa3LfvWnx39JfcP/pN+NPXkVnbCabZzG5KiFrmnztNTRiuSjhfD6YhDty4yjpU4c0QFHuNfSG7LRj5X7U0KCpkaAoz/AdByhgHs7Fo9QWuOtEw3sbPurfl66rCiMv4G9WbtwvBrO9e3gEDYf5R2pDLXeEOPPqv6GIHMdf8okwkA==
+sidebar_class_name: "post api-method"
+info_path: docs/api/api-v-1
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload an image file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/image"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Upload an image file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"file":{"nullable":true}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Returns image URL","content":{"application/json":{"schema":{"type":"object","properties":{"image_url":{"type":"string"}},"required":["image_url"]}}}},"204":{"description":"No Content"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

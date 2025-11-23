@@ -1,0 +1,10 @@
+{
+  "label": "Integrations",
+  "position": 8,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Third-Party Integrations",
+    "description": "Documentation for external service integrations and APIs"
+  }
+}

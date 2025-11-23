@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "//"
+  ],
+  "globalDependencies": [
+    ".env"
+  ],
+  "tasks": {
+    "build": {
+      "env": [
+        "ROARR_LOG",
+        "API_KEY"
+      ],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts"
+      ]
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "setup-env:dev": {
+      "outputs": [
+        ".env"
+      ]
+    }
+  }
+}
