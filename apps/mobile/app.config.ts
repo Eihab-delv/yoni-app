@@ -10,7 +10,7 @@ function getVersionFromFile(): string {
     return version;
   } catch (error) {
     console.warn('Could not read version.txt, falling back to default version');
-    return '0.0.3';
+    return '0.0.1';
   }
 }
 
@@ -19,18 +19,18 @@ export default ({ config }: ConfigContext): ExpoConfig => {
   const DEV = 'dev'
   const env = process.env.ENVIRONMENT ?? DEV
   const ext = env === PROD ? '' : `.${env}`
-  let name = `TS Mono (${ext.slice(1).toUpperCase()})`
+  let name = `yoni (${ext.slice(1).toUpperCase()})`
   const version = getVersionFromFile()
-  
+
   return {
     ...config,
     name,
     version,
     "runtimeVersion": "runtime-1",
-    slug: "mobile",
+    slug: "yoni-app",
     ios: {
       ...config.ios,
-      bundleIdentifier: `com.delv.example${ext}`,
+      bundleIdentifier: `com.delv.yoni${ext}`,
       googleServicesFile: `./google-services/GoogleService-Info${ext}.plist`,
       entitlements: config.ios ? {
         ...config.ios.entitlements,
@@ -39,7 +39,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     android: {
       ...config.android,
       googleServicesFile: `./google-services/google-services${ext}.json`,
-      package: `com.delv.example${ext}`,
+      package: `com.delv.yoni${ext}`,
     },
   }
 };

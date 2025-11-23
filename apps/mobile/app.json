@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "yoni",
-    "slug": "mobile",
+    "slug": "yoni-app",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "mobile",
@@ -9,7 +9,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.delv.example",
+      "bundleIdentifier": "com.delv.yoni",
       "entitlements": {},
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
@@ -24,7 +24,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.delv.example"
+      "package": "com.delv.yoni"
     },
     "web": {
       "bundler": "metro",
