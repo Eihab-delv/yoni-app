@@ -38,7 +38,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     },
     android: {
       ...config.android,
-      //googleServicesFile: `./google-services/google-services${ext}.json`,
+      googleServicesFile: `./google-services/google-services${ext}.json`,
       package: `com.delv.yoni${ext}`,
     },
   }
