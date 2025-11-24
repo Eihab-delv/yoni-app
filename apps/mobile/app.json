@@ -57,7 +57,10 @@
       "typedRoutes": true
     },
     "extra": {
-      "router": {}
+      "router": {},
+      "eas": {
+        "projectId": "4ec3eaf7-95a1-4a30-8d0b-f614b1112cd8"
+      }
     },
     "owner": "delv-pty-ltd"
   }
