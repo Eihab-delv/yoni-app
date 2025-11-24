@@ -31,14 +31,14 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     ios: {
       ...config.ios,
       bundleIdentifier: `com.delv.yoni${ext}`,
-      googleServicesFile: `./google-services/GoogleService-Info${ext}.plist`,
+     // googleServicesFile: `./google-services/GoogleService-Info${ext}.plist`,
       entitlements: config.ios ? {
         ...config.ios.entitlements,
       } : {}
     },
     android: {
       ...config.android,
-      googleServicesFile: `./google-services/google-services${ext}.json`,
+      //googleServicesFile: `./google-services/google-services${ext}.json`,
       package: `com.delv.yoni${ext}`,
     },
   }
