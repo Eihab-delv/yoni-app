@@ -31,7 +31,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     ios: {
       ...config.ios,
       bundleIdentifier: `com.delv.yoni${ext}`,
-      googleServicesFile: `./google-services/GoogleService-Info${ext}.plist`,
+     // googleServicesFile: `./google-services/GoogleService-Info${ext}.plist`,
       entitlements: config.ios ? {
         ...config.ios.entitlements,
       } : {}
